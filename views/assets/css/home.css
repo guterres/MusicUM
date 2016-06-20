@@ -1,0 +1,55 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-default .nav li a{
+  text-transform:uppercase;
+  font-weight:400;
+  letter-spacing:1px;
+  color: #CCCCFF;
+  background-color: transparent;
+}
+.btn-default {
+  border-color:#CCCCFF;
+}
+
+.navbar-right{
+  margin-right: 0px;
+}
+.navbar-default .nav li a:hover{
+  color:#fff
+}
+.navbar-default{
+  background-color:transparent;
+  padding:25px 0;
+  transition:padding .3s;
+  border:0
+}
+.navbar-default .navbar-brand{
+  font-size:2em;
+  transition:all .3s
+}
+
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+
+    color: #fff;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+header .header-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 50px;
+    transform: translateY(-50%);
+    text-align: center;
+}

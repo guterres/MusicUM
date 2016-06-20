@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:ns1="Alunos">
+
+    <xs:element name="audicao" type="Audicao"/>
+    <xs:complexType name="Audicao">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="subtitulo" type="xs:string"/>
+            <xs:element name="tema" type="xs:string"/>
+            <xs:element name="data" type="xs:date"/>
+            <xs:element name="hora" type="xs:time"/>
+            <xs:element name="organizador" type="xs:string"/>
+            <xs:element name="duracao" type="xs:time"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="atuacao" type="Atuacao"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:complexType name="Atuacao">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="grupo" type="xs:string"/>
+            <xs:element name="alunos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="aluno" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="professores">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="professor" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="obras">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="obra" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+</xs:schema>

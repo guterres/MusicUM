@@ -1,0 +1,103 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    padding-top: 80px;
+    margin-bottom: 90px;
+    background-color: #E6E1E1;
+  }
+
+  .theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .theme-showcase > p > .btn {
+    margin: 5px 0;
+  }
+
+  .theme-showcase .navbar .container {
+    width: auto;
+  }
+
+  .footer {
+    height: 60px;
+    background-color: black;
+    padding-top:10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .pos{
+    /*margin-top: 30px;*/
+    margin-bottom: 5px;
+    top: 150px;
+    left: 1040px;
+    right: 0px;
+    z-index: 100;
+  }
+
+
+  .form-control[readonly]{
+    background-color:white;
+  }
+  .table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+  }
+
+  .table-user-information > tbody > tr:first-child {
+    border-top: 0;
+  }
+
+
+  .table-user-information > tbody > tr > td {
+    border-top: 0;
+  }
+
+  .jumbotron {
+    height: 350px;
+    color: white;
+    text-shadow: #444 0 1px 1px;
+    background: url('../img/header.jpg');
+    background-size: cover;
+    padding-top: 5px;
+
+  }
+  .container .jumbotron{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .jumbotron p{
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .title{
+    line-height: 10px;
+  }
+  .show{
+    padding-top: 130px;
+    line-height: 10px;
+  }
+  .thumbnail{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .thumbnail .caption{
+    padding: 0px;
+    padding-bottom: 70px;
+  }

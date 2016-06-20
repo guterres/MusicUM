@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="alunos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="aluno" type="aluno"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="aluno">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="dataNasc" type="xs:string"/>
+            <xs:element name="curso" type="xs:string"/>
+            <xs:element name="anoCurso" type="xs:int"/>
+            <xs:element name="instrumento" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+</xs:schema>

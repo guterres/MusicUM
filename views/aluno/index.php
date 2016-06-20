@@ -1,0 +1,53 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+    <a style="margin-top:-4px;" href="?controller=aluno&action=register" class="btn btn-success btn-circle pull-right"  data-toggle="tooltip" data-placement="top" title="Adicionar"><span class="glyphicon glyphicon-plus"></span></a>
+    <a id="import" style="margin-top:-4px; margin-right:4px;" href="?controller=aluno&action=import" class="btn btn-primary btn-circle pull-right"  data-toggle="tooltip" data-placement="top" title="Importar"><span class="glyphicon glyphicon-import"></span></a>
+    <strong class="text-center">Alunos</strong>
+  </div>
+  <div class="panel-body">
+    <?php if($alunos){ ?>
+<table border="1" id="table_gestao" class="display">
+  <thead>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>DataNasc</th>
+    <th>Ano</th>
+    <th>Curso</th>
+    <th>Instrumento</th>
+    <th>Accao</th>
+  </thead>
+  <tbody>
+    <?php foreach($alunos as $a){ ?>
+      <tr>
+        <td><?= $a->id ?></td>
+        <td><?= $a->nome ?></td>
+        <td><?= $a->dataNasc ?></td>
+        <td><?= $a->anoCurso ?></td>
+        <td><?= $a->curso->nome ?></td>
+        <td><?= $a->curso->instrumento->nome ?></td>
+        <td>
+          <a href="?controller=aluno&action=show&id=<?= $a->id ?>" data-toggle="tooltip" data-placement="top" title="Visualizar"><span class="glyphicon glyphicon-eye-open"></span></a>
+          <a href="?controller=aluno&action=edit&id=<?= $a->id ?>" data-toggle="tooltip" data-placement="top" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a href="?controller=aluno&action=destroy&id=<?= $a->id ?>" data-toggle="tooltip" id="confirm-delete" data-placement="top"  title="Remover"><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+      </tr>
+    <?php } ?>
+  </tbody>
+</table>
+<?php }else{ echo "<p class='text-center'>Sem registos disponíveis</p>"; } ?>
+</div>
+</div>
+
+
+<script>
+function isXml(input){
+   var value = input.value;
+   var res = value.substr(value.lastIndexOf('.')) == '.xml';
+   if(!res){
+     input.value = "";
+     bootbox.alert("Ficheiro inválido");
+   }
+   return res;
+ }
+ </script>
